@@ -1,0 +1,129 @@
+/*-------------------------------------------------------*/
+/* Navbar
+/*-------------------------------------------------------*/
+.navbar {
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-radius: 0px;
+    z-index: 999;
+    margin-bottom: 0px;
+    transition: all 0.5s ease-in-out;
+    .navbar-brand {
+        color: #fff !important;
+        text-transform: uppercase;
+        padding-top: 0;
+        .logo-dark {
+            display: none;
+            height: 27px;
+        }
+        .logo-light {
+            display: inline-block;
+            height: 27px;
+        }
+    }
+    .navbar-nav {
+        li {
+            a {
+                color: #fff !important;
+                font-size: 15px;
+                background-color: transparent !important;
+                margin-right: 30px;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                letter-spacing: 0.05em;
+                line-height: 24px;
+                transition: all 0.5s;
+                font-weight: 500;
+                &:hover,
+                &:active {
+                    color: $main-color !important;
+                }
+            }
+            &:last-child a{
+                margin-right: 0;
+            }
+            &.active {
+                a {
+                    color: $main-color !important;
+                }
+            }
+        }
+    }
+    &.sticky {
+        background-color: #fff !important;
+        box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.050980392156862744);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .navbar-nav {
+            li {
+                a {
+                    color: #000 !important;
+                    &:hover,
+                    &:active {
+                        color: $main-color !important;
+                    }
+                }
+                &.active {
+                    a {
+                        color: $main-color !important;
+                    }
+                }
+            }
+        }
+        .navbar-brand {
+            .logo-dark {
+                display: inline-block;
+            }
+            .logo-light {
+                display: none;
+            }
+        }
+    }
+    .navbar-toggler {
+        color: #000;
+        font-size: 36px;
+        padding: 0px;
+        outline: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar {
+        background-color: #fff !important;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        .navbar-brand {
+            .logo-light {
+                display: none;
+            }
+            .logo-dark {
+                display: inline-block;
+            }
+        }
+        .navbar-nav {
+            text-align: center;
+            li {
+                a {
+                    color: rgba(0, 0, 0, 0.6) !important;
+                    margin: 0 0px;
+                    line-height: 15px;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar {
+        .navbar-nav {
+            li {
+                a {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

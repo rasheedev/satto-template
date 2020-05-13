@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+html(lang="en")
+
+    head
+
+        include head.pug
+  
+    body
+
+        // Loader
+        div(id="preloader")
+            div(class="spinner")
+
+        // Navbar
+        nav(class="navbar navbar-expand-md fixed-top")
+            div(class="container")
+                a(class="navbar-brand" href="#")
+                    img(src="img/logo.png" alt="" class="img-fluid logo-light")
+                    img(src="img/logo-dark.png" alt="" class="img-fluid logo-dark")
+                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
+                    span(class="mdi mdi-menu")
+                div(class="collapse navbar-collapse" id="navbarCollapse")
+                    ul(class="navbar-nav ml-auto")
+                        li(class="nav-item active")
+                            a(class="nav-link" href="#home") Home
+                        li(class="nav-item")
+                            a(class="nav-link" href="#about") About
+                        li(class="nav-item")
+                            a(class="nav-link" href="#services") Services
+                        li(class="nav-item")
+                            a(class="nav-link" href="#works") Portfolio
+                        li(class="nav-item")
+                            a(class="nav-link" href="#testimonials") Testimonials
+                        li(class="nav-item")
+                            a(class="nav-link" href="#blog") Blog
+                        li(class="nav-item")
+                            a(class="nav-link" href="#contact") Contact
+
+        //- Home
+        block HomeSection
+        
+        // About Section
+        section(class="section" id="about")
+            div(class="container")
+                div(class="row align-items-center")
+                    div(class="col-lg-7")
+                        div(class="about-desc")
+                            h2 About Me
+                            h4 Hello! I'M 
+                                span(class="element" data-elements="Satto Ricko., A Freelancer., A Front End Developer.,A UX/UI Designer.")
+                            div(class="about-text")
+                                p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                p The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                                p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                            div(class="about-actions scroll-to")
+                                a(href="#contact" class="btn") Contact Me Now
+                                a(href="#works" class="btn btn-link") 
+                                    | Discover My Works
+                                    i(class="mdi mdi-chevron-right")
+                    div(class="col-lg-5")
+                        div(class="about-img")
+                            img(src="img/about.jpg" alt="" class="img-fluid")
+                            div(class="about-play")
+                                a(href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="video-play")
+                                    i(class="mdi mdi-play")
+
+        // Services Section
+        section(class="section bg-light" id="services")
+            div(class="container")
+                div(class="section-title")
+                    h2 My Services
+                    div(class="divider")
+                    p It is a long established fact that a reader will be of a page when established fact looking at its layout.
+                div(class="servicess-wrap")
+                    div(class="row")
+                        div(class="col-lg-4")
+                            div(class="service")
+                                div(class="service-icon")
+                                    i(class="mbri-growing-chart")
+                                div(class="service-details")
+                                    h5(class="service-title") Graphic Design
+                                    p(class="service-desc") There are many variations of passages of but the majority have suffered alteration in some form.
+                        div(class="col-lg-4")
+                            div(class="service")
+                                div(class="service-icon")
+                                    i(class="mbri-hot-cup")
+                                div(class="service-details")
+                                    h5(class="service-title") Unlimited Color
+                                    p(class="service-desc") There are many variations of passages of but the majority have suffered alteration in some form.
+                        div(class="col-lg-4")
+                            div(class="service")
+                                div(class="service-icon")
+                                    i(class="mbri-upload")
+                                div(class="service-details")
+                                    h5(class="service-title") Media Marketing
+                                    p(class="service-desc") There are many variations of passages of but the majority have suffered alteration in some form.
+                        div(class="col-lg-4")
+                            div(class="service")
+                                div(class="service-icon")
+                                    i(class="mbri-layers")
+                                div(class="service-details")
+                                    h5(class="service-title") Unlimited Wifi
+                                    p(class="service-desc") There are many variations of passages of but the majority have suffered alteration in some form.
+                        div(class="col-lg-4")
+                            div(class="service")
+                                div(class="service-icon")
+                                    i(class="mbri-website-theme")
+                                div(class="service-details")
+                                    h5(class="service-title") Responsive Design
+                                    p(class="service-desc") There are many variations of passages of but the majority have suffered alteration in some form.
+                        div(class="col-lg-4")
+                            div(class="service")
+                                div(class="service-icon")
+                                    i(class="mbri-edit")
+                                div(class="service-details")
+                                    h5(class="service-title") Easy to Customize
+                                    p(class="service-desc") There are many variations of passages of but the majority have suffered alteration in some form.
+
+        // Works Section
+        section(class="section" id="works")
+            div(class="container")
+                div(class="section-title")
+                    h2 My Portfolio
+                    div(class="divider")
+                    p It is a long established fact that a reader will be of a page when established fact looking at its layout.
+                div(class="works-wrap")
+                    ul(class="work-menu list-unstyled list-inline" id="menu-filter")
+                        li(class="list-inline-item")
+                            a(class="active" data-filter="*") All
+                        li(class="list-inline-item")
+                            a(class="" data-filter=".seo") Seo
+                        li(class="list-inline-item")
+                            a(class="" data-filter=".webdesign") Web Design
+                        li(class="list-inline-item")
+                            a(class="" data-filter=".work") Work
+                        li(class="list-inline-item") 
+                            a(class="" data-filter=".wordpress") Wordpress
+                    div(class="work-filter row")
+                        div(class="col-lg-4 work-item webdesign wordpress")
+                            a(href="img/works/1.jpg" class="img-zoom")
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/1.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+                        div(class="col-lg-4 work-item webdesign seo")
+                            a(href="img/works/2.jpg" class="img-zoom")
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/2.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+                        div(class="col-lg-4 work-item seo wordpress")
+                            a(href="img/works/3.jpg" class="img-zoom")
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/3.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+                        div(class="col-lg-4 work-item wordpress work webdesign")
+                            a(href="img/works/4.jpg" class="img-zoom")
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/4.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+                        div(class="col-lg-4 work-item seo webdesign")
+                            a(href="img/works/5.jpg" class="img-zoom")
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/5.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+                        div(class="col-lg-4 work-item wordpress webdesign")
+                            a(href="img/works/6.jpg" class="img-zoom") 
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/6.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+                        div(class="col-lg-4 work-item devlopment webdesign work")
+                            a(href="img/works/7.jpg" class="img-zoom") 
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/7.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+                        div(class="col-lg-4 work-item devlopment webdesign work")
+                            a(href="img/works/8.jpg" class="img-zoom") 
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/8.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+                        div(class="col-lg-4 work-item devlopment seo")
+                            a(href="img/works/9.jpg" class="img-zoom") 
+                                div(class="work-box")
+                                    div(class="work-img")
+                                        img(src="img/works/9.jpg" class="img-fluid rounded" alt="")
+                                    div(class="work-detail")
+                                        h4 Project Title
+                                        p Category
+
+        // Testimonials Section
+        section(class="section bg-light" id="testimonials")
+            div(class="container")
+                div(class="section-title")
+                    h2 Our Clients
+                    div(class="divider")
+                    p It is a long established fact that a reader will be of a page when established fact looking at its layout.
+                div(class="testi-wrap")
+                    div(id="owl-testi" class="owl-carousel")
+                        div(class="testi-box") 
+                            div(class="testi-icon")
+                                i(class="mbri-quote-left")
+                            p(class="testi-text") "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here"
+                            p(class="testi-author")
+                                img(src="img/testi/testi-1.jpg" alt="" class="img-thumbnail img-fluid rounded-circle")
+                                strong David Lee
+                                span Founder at Patomatic
+                        div(class="testi-box")
+                            div(class="testi-icon")
+                                i(class="mbri-quote-left")
+                            p(class="testi-text") "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here"
+                            p(class="testi-author") 
+                                img(src="img/testi/testi-2.jpg" alt="" class="img-thumbnail img-fluid rounded-circle")
+                                strong Isaac Santos
+                                span UX Designer at Indeello
+                        div(class="testi-box")
+                            div(class="testi-icon")
+                                i(class="mbri-quote-left")
+                            p(class="testi-text") "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here"
+                            p(class="testi-author") 
+                                img(src="img/testi/testi-3.jpg" alt="" class="img-thumbnail img-fluid rounded-circle")
+                                strong Jonas Paricio
+                                span Project Manager at Envato
+
+        // CTA Section
+        section(class="section" id="cta")
+            div(class="container")
+                p I Am Always Available for Freelance Works.
+                h2 Start a project with me today!
+                div(class="scroll-to")
+                    a(href="#contact" class="btn btn-outline") Hire Me Now!
+
+        // Blog Section
+        section(class="section bg-light" id="blog")
+            div(class="container")
+                div(class="section-title")
+                    h2 My Blog
+                    div(class="divider")
+                    p It is a long established fact that a reader will be of a page when established fact looking at its layout.
+                div(class="blog-wrap")
+                    div(class="row")
+                        div(class="col-lg-4")
+                            div(class="blog-post")
+                                a(class="blog-img" href="#")
+                                    img(src="img/blog/blog-1.jpg" alt="" class="img-fluid")
+                                div(class="blog-content")
+                                    h5(class="blog-title")
+                                        a(href="#") There are many variations
+                                    p(class="blog-meta")
+                                        span(class="date") 
+                                            i(class="mdi mdi-calendar") 
+                                            | 22 March 2018 
+                                        a(href="#" class="author") 
+                                            i(class="mdi mdi-account") 
+                                            | Satto Ricko
+                                    p(class="blog-body") Sit sagittis vulputate laoreet sodales tortor nulla lobortis bibendum netus primis fames. Lobortis ultricies.
+                                    a(href="#" class="blog-read-more") Read More
+                                        i(class="mdi mdi-chevron-right")
+                        div(class="col-lg-4")
+                            div(class="blog-post")
+                                a(class="blog-img" href="#")
+                                    img(src="img/blog/blog-2.jpg" alt="" class="img-fluid")
+                                div(class="blog-content")
+                                    h5(class="blog-title")
+                                        a(href="#") Contrary to popular belief
+                                    p(class="blog-meta")
+                                        span(class="date") 
+                                            i(class="mdi mdi-calendar") 
+                                            | 22 March 2018 
+                                        a(href="#" class="author") 
+                                            i(class="mdi mdi-account") 
+                                            | Satto Ricko
+                                    p(class="blog-body") Sit sagittis vulputate laoreet sodales tortor nulla lobortis bibendum netus primis fames. Lobortis ultricies.
+                                    a(href="#" class="blog-read-more") Read More
+                                        i(class="mdi mdi-chevron-right")
+                        div(class="col-lg-4")
+                            div(class="blog-post")
+                                a(class="blog-img" href="#")
+                                    img(src="img/blog/blog-3.jpg" alt="" class="img-fluid")
+                                div(class="blog-content")
+                                    h5(class="blog-title")
+                                        a(href="#") Lorem Ipsum is not simply
+                                    p(class="blog-meta")
+                                        span(class="date") 
+                                            i(class="mdi mdi-calendar") 
+                                            | 22 March 2018 
+                                        a(href="#" class="author") 
+                                            i(class="mdi mdi-account") 
+                                            | Satto Ricko
+                                    p(class="blog-body") Sit sagittis vulputate laoreet sodales tortor nulla lobortis bibendum netus primis fames. Lobortis ultricies.
+                                    a(href="#" class="blog-read-more") Read More
+                                        i(class="mdi mdi-chevron-right")
+
+        // Contact Section
+        section(class="section" id="contact")
+            div(class="container")
+                div(class="section-title")
+                    h2 Contact Me
+                    div(class="divider")
+                    p It is a long established fact that a reader will be of a page when established fact looking at its layout.
+                div(class="contact-wrap")
+                    div(class="contact-info")
+                        div(class="row")
+                            div(class="col-lg-4")
+                                div(class="single-info")
+                                    div(class="contact-icon")
+                                        i(class="mbri-mobile2")
+                                    div(class="contact-detail")
+                                        h5 Call Me
+                                        p +1 395 2017 6814
+                            div(class="col-lg-4")
+                                div(class="single-info")
+                                    div(class="contact-icon")
+                                        i(class="mbri-letter")
+                                    div(class="contact-detail")
+                                        h5 Email Me
+                                        p email@website.com
+                            div(class="col-lg-4")
+                                div(class="single-info")
+                                    div(class="contact-icon")
+                                        i(class="mbri-pin")
+                                    div(class="contact-detail")
+                                        h5 Visit Me
+                                        p 202 Grasselli Street, Conway.
+                    div(class="contact-form")   
+                        div(class="row")
+                            div(class="col-lg-12")
+                                form
+                                    div(class="row")
+                                        div(class="col-lg-5")
+                                            div(class="row")
+                                                div(class="col-lg-12")
+                                                    div(class="form-group")
+                                                        input(name="name" id="name" type="text" class="form-control" placeholder="Your Name*" required="")
+                                                div(class="col-lg-12")
+                                                    div(class="form-group")
+                                                        input(name="email" id="email" type="email" class="form-control" placeholder="Your Email*" required="")
+                                                div(class="col-lg-12")
+                                                    div(class="form-group")
+                                                        input(type="text" class="form-control" id="subject" placeholder="Your Subject.." required="")
+                                        div(class="col-lg-7")
+                                            div(class="form-group")
+                                                textarea(name="comments" id="comments" rows="6" class="form-control" placeholder="Your message...")
+                                    div(class="row")
+                                        div(class="col-lg-12 text-right")
+                                            input(type="submit" class="btn" value="Send Message")
+            
+        // Footer Section
+        footer(class="footer bg-light")
+            div(class="container")
+                div(class="footer-wrap")
+                    ul(class="footer-social list-unstyled list-inline")
+                        li(class="list-inline-item")
+                            a(href="#")
+                                i(class="mdi mdi-facebook")
+                        li(class="list-inline-item")
+                            a(href="#")
+                                i(class="mdi mdi-linkedin")
+                        li(class="list-inline-item")
+                            a(href="#")
+                                i(class="mdi mdi-pinterest")
+                        li(class="list-inline-item")
+                            a(href="#")
+                                i(class="mdi mdi-twitter")
+                    p Copyright &copy; 2020 Satto. Made with Love by Pixygen.
+
+        // Back To Top    
+        a(href="#" class="back-to-top")
+            i(class="mdi mdi-chevron-up")
+
+        // Scripts
+        include scripts.pug
+        block ExtraScripts

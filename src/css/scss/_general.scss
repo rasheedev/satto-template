@@ -1,0 +1,151 @@
+/*-------------------------------------------------------*/
+/* General
+/*-------------------------------------------------------*/
+
+/* General tags */
+body {
+  font-family: $default-font;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: normal;
+  color: $text-color;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+:focus {
+  outline: none;
+}
+::-moz-selection {
+  background: $main-color;
+  color: #fff;
+}
+::-webkit-selection {
+  background: $main-color;
+  color: #fff;
+}
+::selection {
+  background: $main-color;
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  color: $heading-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    font-family: $heading-font;
+    color: $heading-color;
+    transition: all 0.5s;
+    &:hover,
+    &:active {
+        color: $main-color;
+    }
+  }
+}
+a {
+  color: $text-color;
+  text-decoration: none !important;
+  transition: all 0.5s;
+  outline: none;
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: $main-color;
+  }
+}
+p {
+  color: $text-color;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: normal;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* General calsses */
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #fff;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  h2 {
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  .divider {
+    height: 2px;
+    width: 80px;
+    margin: 17px auto 15px;
+    background-color: $main-color;
+  }
+  p {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999999;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: $main-color;
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+  }
+}
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}

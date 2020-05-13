@@ -1,0 +1,17 @@
+extends includes/template.pug
+
+block HomeSection
+    // Home Section 18
+    section(class="bg-overlay bg-dark" id="home")
+        a(id="video" class="youtube-bg" data-property="{videoURL:'https://www.youtube.com/watch?v=iIrSCm_0Sj4',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}")
+        div(class="container")
+            div(class="home-content")
+                h4(class="home-welcome") I'M 
+                    span(class="element" data-elements="A Freelancer., A UX/UI Designer., A Developer.")
+                h1(class="home-name") Satto Ricko
+                p(class="home-desc") It is a long established fact that a reader will be of a page when established fact looking at its layout.
+                div(class="home-btn scroll-to")
+                    a(href="#works" class="btn btn-outline") Discover My Works
+        div(class="scroll-down")
+            a(href="#about" class="scroll")
+                i(class="mdi mdi-chevron-down")
