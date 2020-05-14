@@ -28,6 +28,12 @@ $(function() {
          $(".navbar").removeClass("sticky");
    });
 
+   $(window).on("load", function() {
+      if($(window).scrollTop() >= 50) {
+         $(".navbar").addClass("sticky");
+      }
+   });
+
    $(document).on("click", ".navbar-collapse.show", function(e) {
       if($(e.target).is("a"))
          $(this).collapse("hide");
