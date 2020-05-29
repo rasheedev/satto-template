@@ -8,7 +8,7 @@
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 
-$(document).ready(function() {
+$(document).ready(function(){
 
    "use strict";
 
@@ -44,10 +44,12 @@ $(document).ready(function() {
    });
 
    /* Preloader */ 
-   $('#preloader').delay(500).fadeOut('slow');
-   $('.spinner').delay(250).fadeOut();
-   $('body').delay(250).css({
-         'overflow': 'visible'
+   $(window).load(function() {
+      $('#preloader').delay(500).fadeOut('slow');
+      $('.spinner').delay(250).fadeOut();
+      $('body').delay(250).css({
+            'overflow': 'visible'
+      });
    });
 
    /* Back to Top */ 
