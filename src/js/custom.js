@@ -8,7 +8,7 @@
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 
-$(function() {
+$(document).ready(function() {
 
    "use strict";
 
@@ -28,7 +28,7 @@ $(function() {
          $(".navbar").removeClass("sticky");
    });
 
-   $(window).on("load", function() {
+   $(window).load(function() {
       if($(window).scrollTop() >= 50) {
          $(".navbar").addClass("sticky");
       }
