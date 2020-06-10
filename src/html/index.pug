@@ -150,7 +150,7 @@ html(lang="en")
         script(src="js/bootstrap.bundle.min.js")
 
         script.
-            $(window).load(function() {
+            $(window).on("load", function() {
                 $('#preloader').delay(500).fadeOut('slow');
                 $('.spinner').delay(250).fadeOut();
                 $('body').delay(250).css({

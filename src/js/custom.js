@@ -8,6 +8,16 @@
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 
+/* Preloader */ 
+$(window).on("load", function() {
+   $('#preloader').delay(500).fadeOut('slow');
+   $('.spinner').delay(250).fadeOut();
+   $('body').delay(250).css({
+         'overflow': 'visible'
+   });
+});
+
+
 $(document).ready(function(){
 
    "use strict";
@@ -28,7 +38,7 @@ $(document).ready(function(){
          $(".navbar").removeClass("sticky");
    });
 
-   $(window).load(function() {
+   $(window).on("load", function() {
       if($(window).scrollTop() >= 50) {
          $(".navbar").addClass("sticky");
       }
@@ -41,15 +51,6 @@ $(document).ready(function(){
 
    $(".navbar-nav").scrollspy({
       offset: 20
-   });
-
-   /* Preloader */ 
-   $(window).load(function() {
-      $('#preloader').delay(500).fadeOut('slow');
-      $('.spinner').delay(250).fadeOut();
-      $('body').delay(250).css({
-            'overflow': 'visible'
-      });
    });
 
    /* Back to Top */ 

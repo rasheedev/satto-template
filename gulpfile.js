@@ -8,6 +8,7 @@ const gulp         = require('gulp'),
       browserSync  = require('browser-sync').create(),
       imagemin     = require('gulp-imagemin'),
       changed      = require('gulp-changed');
+	  	  
 
 function html() {
     return gulp.src('src/html/*.pug')
@@ -55,24 +56,21 @@ function img() {
         .pipe(browserSync.stream());
 }
 
-function watch() {
+function theBrowserSync() {
     browserSync.init({
         server: {
             baseDir: "./dist"
-        }
+        },
+		port: 3000
     });
+}
 
+function watchFiles() {
     gulp.watch('src/html/**/*.pug', html);
     gulp.watch("src/css/**/*.scss", css);
     gulp.watch('src/js/**/*.js', js);
     gulp.watch('src/img/**/*', img);
 }
 
-exports.html = html;
-exports.css = css;
-exports.js = js;
-exports.img = img;
-exports.watch = watch;
-
-var build = gulp.parallel(watch);
-gulp.task('default', build);
+exports.watch = gulp.parallel(watchFiles, theBrowserSync);
+exports.default = gulp.parallel(html, css, js, img);

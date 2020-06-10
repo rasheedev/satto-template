@@ -132,10 +132,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
-      $('#preloader').delay(500).fadeOut('slow');
-      $('.spinner').delay(250).fadeOut();
-      $('body').delay(250).css({
-          'overflow': 'visible'
+      $(window).on("load", function() {
+          $('#preloader').delay(500).fadeOut('slow');
+          $('.spinner').delay(250).fadeOut();
+          $('body').delay(250).css({
+              'overflow': 'visible'
+          });
       });
     </script>
   </body>
